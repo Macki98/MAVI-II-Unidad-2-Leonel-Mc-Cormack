@@ -34,7 +34,7 @@ void GameController::RunMainLoop()
 
 void GameController::Events()
 {
-	if (IsKeyPressed(KEY_L))
+	if (IsKeyPressed(KEY_SPACE))
 	{
 		if (!boxes.empty()) 
 		{
@@ -63,7 +63,7 @@ void GameController::UpdateGame()
 	}
 
 	// Con la barra espaciadora creamos un objeto
-	if (IsKeyPressed(KEY_SPACE))
+	if (IsKeyPressed(KEY_C))
 	{
 		float finalAngle = currentAngle * RAD2DEG;
 
