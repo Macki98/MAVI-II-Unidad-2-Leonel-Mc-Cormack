@@ -34,6 +34,7 @@ void GameController::RunMainLoop()
 
 void GameController::Events()
 {
+	// Una vez creada la caja, con la barra espaciadora aplicamos el impulso a la caja
 	if (IsKeyPressed(KEY_SPACE))
 	{
 		if (!boxes.empty()) 
@@ -62,7 +63,7 @@ void GameController::UpdateGame()
 		currentAngle -= rotationSpeed;
 	}
 
-	// Con la barra espaciadora creamos un objeto
+	// Con la tecla C creamos la caja
 	if (IsKeyPressed(KEY_C))
 	{
 		float finalAngle = currentAngle * RAD2DEG;
@@ -87,7 +88,7 @@ void GameController::DrawGame()
 		b.Draw();
 	}
 
-	DrawText("Espacio: Crear Caja | Flechas: Rotar | L: Lanzar caja", 10, 10, 20, DARKGRAY);
+	DrawText("C: Crear Caja | Flechas: Rotar | ESPACIO: Lanzar caja", 10, 10, 20, DARKGRAY);
 	DrawText(TextFormat("Angulo actual: %.2f", currentAngle), 10, 40, 20, BLUE);
 
 	EndDrawing();
